@@ -16,8 +16,8 @@ def select_all():
     sql = "SELECT * FROM companies"
     results = run_sql(sql)
 
-    for row in results:
-        company = Company(row['name'], row['id'])
+    for result in results:
+        company = Company(result['name'], result['id'])
         companies.append(company)
     return companies
 
@@ -45,6 +45,6 @@ def delete(id):
 
 
 def update(company):
-    sql = "UPDATE companies SET (name) = (%s) WHERE id=%s"
+    sql = "UPDATE companies SET name = %s WHERE id=%s"
     values = [company.name, company.id]
     run_sql(sql, values)
