@@ -4,3 +4,7 @@ class Transaction:
         self.company = company
         self.category = category
         self.id = id
+
+    def total_transactions(self, transactions):
+        pass
+
