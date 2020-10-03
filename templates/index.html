@@ -1,0 +1,31 @@
+{% extends "base.html %}
+
+{% block content %}
+<header>
+    Blue subheader here 
+</header>
+    <article class="transaction-list">
+        {% for transaction in all_transactions  %}
+        <ul>
+            <li>{{ transaction.company.name }}</li>
+            <li>{{ transaction.amount }}</li>
+            <li>{{ transaction.tag.category }}</li>
+            <!-- Add list item for fontawesome icon -->
+        </ul>
+        {% endfor %}
+    </article>
+
+    <aside>
+        <nav>
+            <ul>
+                <li>Add transaction button</li>
+                <li>Add/edit company</li>
+                <li>Add/edit category</li>
+
+            </ul>
+
+        </nav>
+
+
+    </aside>
+{% endblock  %}
