@@ -30,7 +30,6 @@ def edit_company(id):
     company = company_repository.select(id)
     return render_template("companies/edit.html", company=company)
 
-
 # Update company and return to companies landing page
 @companies_blueprint.route("/companies/<id>", methods=["POST"])
 def update_company(id):
