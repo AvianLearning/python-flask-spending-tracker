@@ -2,7 +2,7 @@
 
 {% block content %}
 <header>
-    Blue subheader here 
+    <h2>Blue subheader here - bring it transaction total</h2>
 </header>
     <article class="transaction-list">
         {% for transaction in all_transactions  %}
@@ -10,7 +10,7 @@
             <li>{{ transaction.company.name }}</li>
             <li>{{ transaction.amount }}</li>
             <li>{{ transaction.tag.category }}</li>
-            <!-- Add list item for fontawesome icon -->
+           <!-- Add category icon if possible - if else block-->
         </ul>
         {% endfor %}
     </article>
@@ -21,7 +21,6 @@
                 <li>Add transaction button</li>
                 <li>Add/edit company</li>
                 <li>Add/edit category</li>
-                <!-- Add category icon if possible - if else block-->
             </ul>
         </nav>
     </aside>
