@@ -1,10 +1,13 @@
 class Transaction:
-    def __init__(self, amount, company, category, id=None):
+    def __init__(self, amount, company, tag, id=None):
         self.amount = amount
         self.company = company
-        self.category = category
+        self.tag = tag
         self.id = id
 
-    def total_transactions(self, transactions):
-        pass
+    def get_total(self, transactions):
+        total = 0
+        for transaction in transactions:
+            total += transaction.amount
+        return total
 

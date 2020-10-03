@@ -1,5 +1,5 @@
 import unittest
-from models.transaction import Transaction
+from models.transaction import Transaction, get_total
 from models.company import Company
 from models.tag import Tag
 
@@ -15,13 +15,15 @@ class TestTransaction(unittest.TestCase):
         self.transaction_2 = Transaction(6.50, self.company_2, self.tag_2)
 
     def test_transaction_has_amount(self):
-        pass
+        self.assertEqual(10.00, self.transaction_1.amount)
 
     def test_transaction_has_company(self):
-        pass
+        self.assertEqual("RailScot", self.transaction_1.company.name)
 
     def test_transaction_has_category(self):
-        pass
+        self.assertEqual("food", self.transaction_2.tag.category)
 
     def test_can_return_total_of_transactions(self):
-        pass
+        all_transactions = [self.transaction_1, self.transaction_2]
+        total = get_total(all_transactions)
+        self.assertEqual(16.50, total)
