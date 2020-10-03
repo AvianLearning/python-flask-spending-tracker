@@ -35,3 +35,12 @@ def select(id):
     return transaction
 
 
+def delete_all():
+    sql = "DELETE FROM transactions"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE FROM transactions where id=%s"
+    values = [id]
+    run_sql(sql, values)
