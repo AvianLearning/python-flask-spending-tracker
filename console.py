@@ -37,8 +37,16 @@ transaction_repository.save(transaction_1)
 transaction_2 = Transaction(32.00, company_2, tag_2)
 transaction_repository.save(transaction_2)
 
-transaction_3= Transaction(750.00, company_3, tag_3)
+transaction_3 = Transaction(750.00, company_3, tag_3)
 transaction_repository.save(transaction_3)
+
+transactions = transaction_repository.select_all()
+
+company_1 = Company("LNER")
+company_repository.update(company_1)
+
+tag_2 = Tag("drink")
+tag_repository.update(tag_2)
 
 pdb.set_trace()
 
