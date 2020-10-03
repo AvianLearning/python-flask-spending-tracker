@@ -1,4 +1,4 @@
-# from models.transaction import Transaction
+from models.transaction import *
 
 transaction_1 = Transaction(10.00, "RailScot", "travel")
 transaction_2 = Transaction(6.50, "Pilot Beer", "food")
