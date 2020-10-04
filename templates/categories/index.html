@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<header>
+    <h2>Categories</h2>
+</header>
+{% for tag in tags %}
+    <article class="category-list">
+        <ul>
+            <li>{{ tag.category }}</li>
+            <li><a href="/categories/{{ tag.id }}/edit">Edit category</a></li>
+        </ul>       
+</article>
+    
+{% endfor %}
+    <aside>
+        <nav>
+            <ul>
+                <li>Add category</li>
+                <li><a href="/">View transactions</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+{% endblock %}
