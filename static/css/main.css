@@ -1,0 +1,8 @@
+body > header > h1 {
+    font-family: 'Zilla Slab Highlight', cursive;
+    font-size: 3em; 
+}
+
+body > main {
+    font-family: 'Merriweather Sans', sans-serif;
+}

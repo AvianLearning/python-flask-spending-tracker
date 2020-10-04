@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Import stylesheet, fonts here -->
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Cash Flow: track your spending</title>
 </head>
 
 <body>
     <header>
-        <h1>cash flow</h1>
+        <h1>cash flow => </h1>
     </header>
     <main>
         {% block content %}
