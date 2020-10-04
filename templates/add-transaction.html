@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/" method="POST">
+    <div>
+        <label for="amount">Amount spent: </label>
+        <input type="number" id="amount" name="amount" placeholder="amount" required>
+    </div>
+
+    <div>
+        <label for="company">Company: </label>
+        <select id="company" name="company_id">
+            {% for company in companies %}
+            <option value="{{ company.id }}">{{ company.name }}</option> 
+            {% endfor %}
+        </select>
+    </div>
+
+    <div>
+        <label for="tag">Category: </label>
+        <select id="tag" name="tag_id">
+            {% for tag in tags %}
+            <option value="{{ tag.id }}">{{ tag.category }}</option> 
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit">Add transaction</button>
+    
+</form>    
+
+{% endblock  %}
