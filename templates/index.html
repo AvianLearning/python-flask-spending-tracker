@@ -1,19 +1,20 @@
-{% extends "base.html %}
+{% extends "base.html" %}
 
 {% block content %}
 <header>
     <h2>Blue subheader here - bring it transaction total</h2>
 </header>
+{% for transaction in all_transactions %}
     <article class="transaction-list">
-        
         <ul>
-            {% for transaction in transactions %}
-            <li>{{ transaction.company.name }}">{{ transaction.amount }}>{{ transaction.tag.category }}</li>
-           {% endfor %}
-        </ul>
-          <!-- Add category icon if possible - if else block-->
-    </article>
-
+            <li>{{ transaction.company.name }}"</li>
+            <li>{{ transaction.amount }}</li>
+            <li></li>{{ transaction.tag.category }}</li>
+        </ul> -->
+          <!-- Add category icon if possible - if else block -->
+</article>
+    
+{% endfor %}
     <aside>
         <nav>
             <ul>
@@ -23,4 +24,4 @@
             </ul>
         </nav>
     </aside>
-{% endblock  %}
+{% endblock %}
