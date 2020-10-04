@@ -11,7 +11,8 @@ transactions_blueprint = Blueprint("transactions", __name__)
 @transactions_blueprint.route("/")
 def transactions():
     transactions = transaction_repository.select_all()
-    return render_template("index.html", all_transactions=transactions)
+    total = get_total(transactions)
+    return render_template("index.html", all_transactions=transactions, total=total)
 
 
 # Add transaction
@@ -33,3 +34,16 @@ def create_transaction():
     transaction_repository.save(new_transaction)
     return redirect("/")
 
+def get_total(transactions):
+    total = 0.00
+    for transaction in transactions:
+        total += float(transaction.amount)
+        currency = "£{:,.2f}".format(total)
+    return currency
+
+# Show total of all transactions
+# @transactions_blueprint.route("/")
+# def show_total():
+#     transactions = transaction_repository.select_all()
+#     total = get_total(transactions)
+#     return render_template("index.html", total=total)
