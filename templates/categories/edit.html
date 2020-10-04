@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h2>Edit category</h2>
+</header>    
+<form action="/categories/{{ tag.id }}" method="POST">
+    <div>
+        <label for="category">Spend category: </label>
+        <input type="text" id="category" name="category" value="{{ tag.category }}">
+    </div>
+
+    <button type="submit">Update category</button>
+
+</form>
+
+{% endblock %}
