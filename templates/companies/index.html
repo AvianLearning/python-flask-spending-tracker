@@ -8,8 +8,7 @@
     <article class="company-list">
         <ul>
             <li>{{ company.name }}</li>
-            <li><form action="/companies/{{ company.id }}/edit" method="POST">
-                <input type="submit" value="Edit company"></li>
+            <li><a href="/companies/{{ company.id }}/edit">Edit company</a></li>
         </ul>       
 </article>
     

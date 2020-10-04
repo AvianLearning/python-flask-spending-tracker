@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<header>
+    <h2>Edit company</h2>
+</header>    
+<form action="/companies/{{ company.id }}" method="POST">
+    <div>
+        <label for="name">Company name: </label>
+        <input type="text" id="name" name="name " value="{{ company.name }}">
+    </div>
+
+    <button type="submit">Update company</button>
+
+</form>
+
+{% endblock %}
