@@ -4,14 +4,14 @@
 <header>
     <h2>Blue subheader here - bring it transaction total</h2>
 </header>
+ <!-- Add category icon if possible - if else block -->
 {% for transaction in all_transactions %}
     <article class="transaction-list">
         <ul>
-            <li>{{ transaction.company.name }}"</li>
-            <li>{{ transaction.amount }}</li>
-            <li></li>{{ transaction.tag.category }}</li>
-        </ul> -->
-          <!-- Add category icon if possible - if else block -->
+            <li>{{ transaction.company.name }}</li>
+            <li>£ {{ transaction.amount }}</li>
+            <li>{{ transaction.tag.category }}</li>
+        </ul>       
 </article>
     
 {% endfor %}

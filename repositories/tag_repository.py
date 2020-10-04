@@ -27,7 +27,7 @@ def select(id):
     values = [id]
     result = run_sql(sql,values)[0]
     tag = Tag(result["category"], result["id"])
-    return Tag
+    return tag
 
 
 def delete_all():
