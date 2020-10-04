@@ -3,6 +3,14 @@ body > header > h1 {
     font-size: 3em; 
 }
 
+body > header > h1 > a {
+    color:#ba3b3b;
+}
+
+body > header > h1 > a:visited {
+    color:#ba3b3b;
+}
+
 body > main {
     font-family: 'Merriweather Sans', sans-serif;
 }
