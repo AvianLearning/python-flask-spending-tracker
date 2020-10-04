@@ -9,12 +9,12 @@ tags_blueprint = Blueprint("tags", __name__)
 @tags_blueprint.route("/categories")
 def tags():
     tags = tag_repository.select_all()
-    return render_template("categories/index.html", tags=tags)
+    return render_template("/categories/index.html", tags=tags)
 
 # Add tag
-@tags_blueprint.route("categories/add")
+@tags_blueprint.route("/categories/add")
 def add_tag():
-    return render_template("categories/add.html")
+    return render_template("/categories/add.html")
 
 # Create categories and return to category landing page
 @tags_blueprint.route("/categories", methods=["POST"])
@@ -28,7 +28,7 @@ def create_tag():
 @tags_blueprint.route("/categories/<id>/edit")
 def edit_tag(id):
     tag = tag_repository.select(id)
-    return render_template("categories/edit.html", tag=tag)
+    return render_template("/categories/edit.html", tag=tag)
        
 # Update category and return to category landing page
 @tags_blueprint.route("/categories/<id>", methods=["POST"])
