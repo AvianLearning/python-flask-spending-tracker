@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+    <h2>Add a category</h2>
+</header>
+
+<form action="/categories" method="POST">   
+
+    <div>
+        <label for="category">Spend category: </label>
+        <input type="text" id="category" name="category" placeholder="e.g. childcare" required>
+    </div>
+    
+    <button type="submit">Add category</button>
+    
+</form>    
+
+{% endblock  %}
