@@ -7,25 +7,39 @@
 <!-- Add category icon if possible - if else block -->
 
 <article class="transaction-list">
-
-    <ul>
+<table>
+    <thead>
+        <tr>
+          <th>Company</th>
+          <th>Amount</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+    <tbody>
         {% for transaction in all_transactions %}
-    
-        <li #company-name>{{ transaction.company.name }}</li>
-        <li #amount>£{{ transaction.amount }}</li>
-        <li #category>{{ transaction.tag.category }}</li>
-        <hr>
-        {% endfor %}
-    </ul>
+    <tr>  
+        <td>
+            {{ transaction.company.name }}
+        </td>
+        <td>
+            £{{ transaction.amount }}
+        </td>
+        <td>
+            {{ transaction.tag.category }}
+        </td>
+    </tr>
+    {% endfor %}
 
+    </tbody>
+</table>
 </article>
 
 <aside>
     <nav>
         <ul>
-            <li><h3><a href="/add-transaction">Add transaction</a></h3></li>
-            <li><h3><a href="/companies">Update companies</a></h3></li>
-            <li><h3><a href="/categories">Update categories</a></h3></li>
+            <li class="green-button"><h3><a href="/add-transaction">Add transaction</a></h3></li>
+            <li class="green-button"><h3><a href="/companies">Update companies</a></h3></li>
+            <li class="green-button"><h3><a href="/categories">Update categories</a></h3></li>
         </ul>
     </nav>
 </aside>

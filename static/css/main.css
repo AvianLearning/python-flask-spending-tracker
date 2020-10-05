@@ -6,7 +6,7 @@ body > header > h1 {
     font-family: 'Zilla Slab Highlight', cursive;
     font-size: 3em; 
     padding: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 body > header > h1 > a {
@@ -47,39 +47,83 @@ ul {
 }
 
 
-.transaction-list {
-    justify-self: center;
+/* .transaction-list {
     padding: 10px;
     margin: 20px;
     background-color: #e5e5e5;
     border-radius: 0.5em;
-}
+} */
 
-.transaction-list > ul {
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    background-color: #e5e5e5;
+}
+thead th:nth-child(1) {
+    width: 50%;
+  }
+  
+thead th:nth-child(2) {
+    width: 20%;
+  }
+  
+thead th:nth-child(3) {
+    width: 30%;
+  }
+th, td {
+    padding: 20px;
+  }
+
+tbody td {
     text-align: center;
-    margin: 0;
-    padding: 0;
-    /* display: grid;
-    grid-template-areas:
-    'company name' 'amount' 'category';
-    grid-template-columns: 2fr 1fr 1fr; */
-}
+  }
 
-.transaction-list > ul > li {
-    display: inline;
-    padding: 5px;
-    /* flex-basis: auto; */
+thead {
+    background-color: #2d4059;
+    color: white;
+  }
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  
+tbody tr:nth-child(even) {
+    background-color: #e5e5e5;
+  }
+
+aside > nav {
+    margin: 5%;
+    justify-self: start;
 }
 
 aside > nav > ul {
     margin: 5%;
 }
-aside > nav > ul> li {
+.green-button a {
+    display: block;
     color: white;
-    padding: 8px;
+    padding: 12px;
     border: none;
     background-color: #457d17;
     border-radius: 3px;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
+}
+
+.green-button a:hover {
+    background-color: #3e7014;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
 }
