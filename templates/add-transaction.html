@@ -4,6 +4,9 @@
 <header>
     <h2>Add transaction</h2>
 </header>
+
+<article class="add-transaction-form" grid-area: article>
+
 <form action="/" method="POST">
     <div>
         <label for="amount">Amount spent: </label>
@@ -19,17 +22,19 @@
         </select>
     </div>
 
-    <div>
-        <label for="tag">Category: </label>
+        <div>
+            <label for="tag">Category: </label>
         <select id="tag" name="tag_id">
             {% for tag in tags %}
             <option value="{{ tag.id }}">{{ tag.category }}</option> 
             {% endfor %}
         </select>
-    </div>
-
+        </div>
+        
     <button type="submit">Add transaction</button>
-    
-</form>    
+   
+</form>   
+
+</article>
 
 {% endblock  %}

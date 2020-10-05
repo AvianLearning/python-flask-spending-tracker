@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header>
+<header grid-area:header>
     <h2>Total spend: {{ total }}</h2>
 </header>
  <!-- Add category icon if possible - if else block -->
 {% for transaction in all_transactions %}
-    <article class="transaction-list">
+    <article class="transaction-list" grid-area: article>
         <ul>
             <li>{{ transaction.company.name }}</li>
             <li>£{{ transaction.amount }}</li>
@@ -15,7 +15,7 @@
 </article>
     
 {% endfor %}
-    <aside>
+    <aside grid-area:aside>
         <nav>
             <ul>
                 <li><a href="/add-transaction">Add transaction</a></li>

@@ -16,6 +16,22 @@ body > main {
     font-family: 'Merriweather Sans', sans-serif;
 }
 
-body {
+main {
     display: grid;
+    grid-template-areas: 
+    'header header'
+    'article aside';
+    grid-template-columns: 7fr 3fr;
+}
+
+main > header {
+    background-color: #2d4059;
+    padding: 10px 10px;
+    width: 100vw;
+}
+
+main > header > h2 {
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
 }
