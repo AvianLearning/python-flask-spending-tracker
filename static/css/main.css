@@ -46,17 +46,9 @@ ul {
     list-style: none;
 }
 
-
-/* .transaction-list {
-    padding: 10px;
-    margin: 20px;
-    background-color: #e5e5e5;
-    border-radius: 0.5em;
-} */
-
 table {
     table-layout: fixed;
-    width: 100%;
+    width: 85%;
     border-collapse: collapse;
     padding: 10px;
     margin-left: 10%;
@@ -96,8 +88,14 @@ tbody tr:nth-child(even) {
     background-color: #e5e5e5;
   }
 
+  tbody tr:hover {
+    background-color: #cecece;
+  }
+
 aside > nav {
-    margin: 5%;
+    margin-top: 30%;
+    margin-right: 5%;
+    margin-left: 5%;
     justify-self: start;
 }
 
