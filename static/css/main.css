@@ -81,7 +81,6 @@ aside > nav > ul {
     border: none;
     background-color: #457d17;
     border-radius: 3px;
-    margin: 20px;
     text-align: center;
 }
 
@@ -105,4 +104,34 @@ a:visited {
     display: flex;
     justify-self: right;
     margin-top: 20px;
+    border-radius: 0.3rem;
 }
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  input[type=text] {
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+  input[type=number] {
+    padding:10px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  }
+
+  select {
+    padding: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    margin: 5px;
+  }
