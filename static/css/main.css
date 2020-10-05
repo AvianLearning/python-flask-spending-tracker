@@ -2,21 +2,6 @@ body {
     margin: 0;
 }
 
-body > header > h1 {
-    font-family: 'Zilla Slab Highlight', cursive;
-    font-size: 3em; 
-    padding: 20px;
-    margin-left: 30px;
-}
-
-body > header > h1 > a {
-    color:#ba3b3b;
-}
-
-body > header > h1 > a:visited {
-    color:#ba3b3b;
-}
-
 body > main {
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -27,19 +12,6 @@ main {
     'blue-header blue-header'
     'article aside';
     grid-template-columns: 6fr 3fr;
-}
-
-main > header {
-    background-color: #2d4059;
-    padding: 10px;
-    width: 100vw;
-    grid-area: blue-header;
-}
-
-main > header > h2 {
-    color: #fff;
-    font-size: 3em;
-    text-align: center;
 }
 
 ul {
@@ -94,7 +66,7 @@ tbody tr:nth-child(even) {
 
 aside > nav {
     margin-top: 30%;
-    margin-right: 5%;
+    margin-right: 8%;
     margin-left: 5%;
     justify-self: start;
 }
@@ -124,4 +96,13 @@ a:link {
 a:visited {
     text-decoration: none;
     color: #fff;
+}
+
+.add-transaction-form {
+    background-color: #e5e5e5;
+    width: 350px;
+    padding: 10px;
+    display: flex;
+    justify-self: right;
+    margin-top: 20px;
 }
