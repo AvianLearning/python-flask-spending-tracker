@@ -4,20 +4,31 @@
 <header>
     <h2>Categories</h2>
 </header>
-{% for tag in tags %}
+
     <article class="category-list">
-        <ul>
-            <li>{{ tag.category }}</li>
-            <li><a href="/categories/{{ tag.id }}/edit">Edit category</a></li>
-        </ul>       
+        <table>
+            <tbody>
+                {% for tag in tags %}
+                <tr>
+                    <td>
+                        {{ tag.category }}
+                    </td>
+                    <td>
+                        <a class="small-edit-button" href="/categories/{{ tag.id }}/edit">Edit category</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
 </article>
     
-{% endfor %}
+
     <aside>
         <nav>
             <ul>
-                <li><a href="/categories/add">Add category</a></li>
-                <li><a href="/">View transactions</a></li>
+                <li class="green-button"><h3><a href="/categories/add">Add category</a></h3></li>
+                <li class="blue-button"><h3><a href="/">View transactions</a></h3></li>
             </ul>
         </nav>
     </aside>
