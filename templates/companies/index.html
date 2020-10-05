@@ -4,20 +4,30 @@
 <header>
     <h2>Companies</h2>
 </header>
-{% for company in companies %}
+
     <article class="company-list">
-        <ul>
-            <li>{{ company.name }}</li>
-            <li><a href="/companies/{{ company.id }}/edit">Edit company</a></li>
-        </ul>       
+        <table>
+            <tbody>
+                {% for company in companies %}
+                <tr>
+                    <td>
+                        {{ company.name }}
+                    </td>
+                    <td class="small-edit-button">
+                        <a href="/companies/{{ company.id }}/edit">Edit company</a> 
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      
 </article>
     
-{% endfor %}
     <aside>
         <nav>
             <ul>
-                <li><a href="/companies/add">Add company</a></li>
-                <li><a href="/">View transactions</a></li>
+                <li class="green-button"><h3><a href="/companies/add">Add company</a></h3></li>
+                <li class="blue-button"><h3><a href="/">View transactions</a></h3></li>
             </ul>
         </nav>
     </aside>

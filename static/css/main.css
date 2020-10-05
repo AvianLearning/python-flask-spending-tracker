@@ -27,6 +27,7 @@ table {
     margin-top: 10%;
     margin-bottom: 20%;
     background-color: #e5e5e5;
+    border-radius: 1em;
 }
 thead th:nth-child(1) {
     width: 50%;
@@ -64,6 +65,21 @@ tbody tr:nth-child(even) {
     background-color: #cecece;
   }
 
+.small-edit-button {
+    color: fff;
+    background-color: #ba3b3b;
+    width: 23%;
+}
+
+.small-edit-button:hover {
+    background-color: #942f2f;
+}
+
+.small-edit-button:visited {
+    text-decoration: none;
+}
+
+
 aside > nav {
     margin-top: 30%;
     margin-right: 8%;
@@ -88,8 +104,23 @@ aside > nav > ul {
     background-color: #3e7014;
 }
 
+.blue-button a {
+    display: block;
+    color: white;
+    padding: 12px;
+    border: none;
+    background-color: #2d4059;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.blue-button a:hover {
+    background-color: #243347;
+}
+
 a:link {
     text-decoration: none;
+    color: #fff;
 }
 
 a:visited {
@@ -105,9 +136,10 @@ a:visited {
     justify-self: right;
     margin-top: 20px;
     border-radius: 0.3rem;
+    margin-bottom: 20%;
 }
 
-button, input, select, textarea {
+input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     box-sizing: border-box;
@@ -115,6 +147,7 @@ button, input, select, textarea {
     padding: 10px;
     margin: 10px;
     box-sizing: border-box;
+    border-radius: 0.3rem;
   }
 
   input[type=text] {
