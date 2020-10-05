@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 body > header > h1 {
     font-family: 'Zilla Slab Highlight', cursive;
     font-size: 3em; 
@@ -19,19 +23,37 @@ body > main {
 main {
     display: grid;
     grid-template-areas: 
-    'header header'
+    'blue-header blue-header'
     'article aside';
     grid-template-columns: 7fr 3fr;
 }
 
 main > header {
     background-color: #2d4059;
-    padding: 10px 10px;
+    padding: 10px;
     width: 100vw;
+    grid-area: blue-header;
 }
 
 main > header > h2 {
     color: #fff;
     font-size: 3em;
     text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.transaction-list {
+    background-color: e5e5e5;
+}
+
+#transaction-list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+#transaction-list > li {
+    display: inline-block;
 }

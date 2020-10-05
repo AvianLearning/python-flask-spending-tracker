@@ -1,27 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<header grid-area:header>
+<header>
     <h2>Total spend: {{ total }}</h2>
 </header>
- <!-- Add category icon if possible - if else block -->
-{% for transaction in all_transactions %}
-    <article class="transaction-list" grid-area: article>
-        <ul>
-            <li>{{ transaction.company.name }}</li>
-            <li>£{{ transaction.amount }}</li>
-            <li>{{ transaction.tag.category }}</li>
-        </ul>       
+<!-- Add category icon if possible - if else block -->
+<article class="transaction-list">
+<ul #transaction-list>
+    {% for transaction in all_transactions %}
+
+    <li>{{ transaction.company.name }}</li>
+    <li>£{{ transaction.amount }}</li>
+    <li>{{ transaction.tag.category }}</li>
+    <hr>
+    {% endfor %}
+</ul>
+
 </article>
-    
-{% endfor %}
-    <aside grid-area:aside>
-        <nav>
-            <ul>
-                <li><a href="/add-transaction">Add transaction</a></li>
-                <li><a href="/companies">Update companies</a></li>
-                <li><a href="/categories">Update categories</a></li>
-            </ul>
-        </nav>
-    </aside>
+<aside>
+    <nav>
+        <ul>
+            <li><a href="/add-transaction">Add transaction</a></li>
+            <li><a href="/companies">Update companies</a></li>
+            <li><a href="/categories">Update categories</a></li>
+        </ul>
+    </nav>
+</aside>
 {% endblock %}
