@@ -3,6 +3,8 @@
 <header>
     <h2>Edit company</h2>
 </header>    
+<article class="grey-centered-form" grid-area: article>
+
 <form action="/companies/{{ company.id }}" method="POST">
     <div>
         <label for="name">Company name: </label>
@@ -12,5 +14,7 @@
     <button type="submit">Update company</button>
 
 </form>
+    
+</article>
 
 {% endblock %}
