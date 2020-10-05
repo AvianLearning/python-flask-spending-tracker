@@ -5,18 +5,21 @@
     <h2>Total spend: {{ total }}</h2>
 </header>
 <!-- Add category icon if possible - if else block -->
-<article class="transaction-list">
-<ul #transaction-list>
-    {% for transaction in all_transactions %}
 
-    <li>{{ transaction.company.name }}</li>
-    <li>£{{ transaction.amount }}</li>
-    <li>{{ transaction.tag.category }}</li>
-    <hr>
-    {% endfor %}
-</ul>
+<article class="transaction-list">
+
+    <ul>
+        {% for transaction in all_transactions %}
+    
+        <li #company-name>{{ transaction.company.name }}</li>
+        <li #amount>£{{ transaction.amount }}</li>
+        <li #category>{{ transaction.tag.category }}</li>
+        <hr>
+        {% endfor %}
+    </ul>
 
 </article>
+
 <aside>
     <nav>
         <ul>

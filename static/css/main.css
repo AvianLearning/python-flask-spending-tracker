@@ -25,7 +25,7 @@ main {
     grid-template-areas: 
     'blue-header blue-header'
     'article aside';
-    grid-template-columns: 7fr 3fr;
+    grid-template-columns: 6fr 3fr;
 }
 
 main > header {
@@ -45,15 +45,26 @@ ul {
     list-style: none;
 }
 
+
 .transaction-list {
-    background-color: e5e5e5;
+    justify-self: center;
+    padding: 10px;
+    margin: 20px;
+    background-color: #e5e5e5;
 }
 
-#transaction-list {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+.transaction-list > ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    /* display: grid;
+    grid-template-areas:
+    'company name' 'amount' 'category';
+    grid-template-columns: 2fr 1fr 1fr; */
 }
 
-#transaction-list > li {
-    display: inline-block;
+.transaction-list > ul > li {
+    display: inline;
+    padding: 5px;
+    /* flex-basis: auto; */
 }
