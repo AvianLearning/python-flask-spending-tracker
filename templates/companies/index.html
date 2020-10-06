@@ -14,7 +14,7 @@
                         {{ company.name }}
                     </td>
                     <td>
-                        <a class="small-edit-button" href="/companies/{{ company.id }}/edit">Edit company</a> 
+                        <a class="small-edit-button" href="/companies/{{ company.id }}/edit"><i class="fas fa-pen fa-xs"></i> Edit company</a> 
                     </td>
                 </tr>
                 {% endfor %}
@@ -26,8 +26,8 @@
     <aside>
         <nav>
             <ul>
-                <li class="green-button"><h3><a href="/companies/add">Add company</a></h3></li>
-                <li class="blue-button"><h3><a href="/">View transactions</a></h3></li>
+                <li class="green-button"><h3><a href="/companies/add"><i class="fas fa-plus"></i> Add company</a></h3></li>
+                <li class="blue-button"><h3><a href="/"><i class="fas fa-chart-line"></i> View transactions</a></h3></li>
             </ul>
         </nav>
     </aside>

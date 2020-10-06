@@ -42,6 +42,11 @@ def get_total(transactions):
     # return currency
     return total
 
+# @transactions_blueprint.route("/", methods=['POST'])
+# def show_budget():
+#     budget = request.form["budget"]
+#     return render_template("index.html", budget=budget)
+
 # Method to create budget and warn user if over budget:
 
 # Enter budget - form field
