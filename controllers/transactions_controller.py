@@ -41,11 +41,20 @@ def get_total(transactions):
         currency = "£{:,.2f}".format(total)
     return currency
     
+# Add budget
+@transactions_blueprint.route("/add-budget")
+def add_budget():
+    return render_template("add-budget.html")
 
-# @transactions_blueprint.route("/", methods=['POST'])
-# def show_budget():
+# @transactions_blueprint.route("/", methods=["POST"])
+# def create_budget():
 #     budget = request.form["budget"]
-#     return render_template("index.html", budget=budget)
+#     return redirect("/", budget=budget)
+
+# Ask instructor
+
+
+
 
 # Method to create budget and warn user if over budget:
 
