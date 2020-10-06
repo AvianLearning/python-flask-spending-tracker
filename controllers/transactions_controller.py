@@ -38,9 +38,9 @@ def get_total(transactions):
     total = 0.00
     for transaction in transactions:
         total += float(transaction.amount)
-    #     currency = "£{:,.2f}".format(total)
-    # return currency
-    return total
+        currency = "£{:,.2f}".format(total)
+    return currency
+    
 
 # @transactions_blueprint.route("/", methods=['POST'])
 # def show_budget():
