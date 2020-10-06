@@ -16,7 +16,7 @@ body > header > h1 > a:visited {
 main > header {
     background-color: #2d4059;
     padding: 10px;
-    width: 100vw;
+    width: 100%;
     grid-area: blue-header;
 }
 

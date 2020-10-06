@@ -19,7 +19,7 @@
 .green-button a {
     display: block;
     color: white;
-    padding: 12px;
+    padding: 12px 6px;
     border: none;
     background-color: #457d17;
     -webkit-border-radius: 3px;
@@ -53,7 +53,7 @@ button:hover {
 .blue-button a {
     display: block;
     color: white;
-    padding: 12px;
+    padding: 12px 6px;
     border: none;
     background-color: #2d4059;
     border-radius: 3px;

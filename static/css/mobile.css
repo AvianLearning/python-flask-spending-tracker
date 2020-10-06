@@ -1,0 +1,67 @@
+@media (max-width: 929px) {
+
+main {
+    display: grid;
+    grid-template-areas: 
+    'blue-header'
+    'article' 
+    'aside';
+}
+
+/* aside {
+    position: fixed;
+    bottom: 0;
+    width:100vw;
+} */
+
+nav {
+    margin: 0;
+}
+nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    justify-content: center;
+    /* justify-self: center; */
+    margin: 0;
+    background-color: #6a9745;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+nav > ul > li {
+    flex-grow: 1;
+}
+nav > ul > a {
+    align-items: stretch;
+}
+
+.grey-centered-form {
+    justify-self: center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100vw;
+    margin: 0;
+    /* min-width: 550px; */
+}
+
+table, thead, tbody, th, td, tr {
+    display: block;
+}
+
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr {
+margin: 0 0 1rem 0;
+}
+
+}

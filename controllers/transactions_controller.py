@@ -38,12 +38,23 @@ def get_total(transactions):
     total = 0.00
     for transaction in transactions:
         total += float(transaction.amount)
-        currency = "£{:,.2f}".format(total)
-    return currency
+    #     currency = "£{:,.2f}".format(total)
+    # return currency
+    return total
 
-# Show total of all transactions
-# @transactions_blueprint.route("/")
-# def show_total():
-#     transactions = transaction_repository.select_all()
+# Method to create budget and warn user if over budget:
+
+# Enter budget - form field
+# Use get total spend method to compare to budget
+# If budget is within £100 of total spend
+# Display budget as red text
+# Otherwise display budget as green text
+
+# def warn_near_budget():
+#     budget = request.form["budget"]
 #     total = get_total(transactions)
-#     return render_template("index.html", total=total)
+
+#     if total >= (budget - 100):
+#         return True
+#     else
+#         return False
