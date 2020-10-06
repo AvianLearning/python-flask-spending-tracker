@@ -18,10 +18,12 @@ main > header {
     padding: 10px;
     width: 100%;
     grid-area: blue-header;
+    display: flex;
 }
 
 main > header > h2 {
     color: #fff;
     font-size: 3em;
-    text-align: center;
+    justify-self: flex-start;
+    padding-left: 5%;
 }

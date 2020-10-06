@@ -8,10 +8,8 @@ main {
     'aside';
 }
 
-/* aside {
-    position: fixed;
-    bottom: 0;
-    width:100vw;
+/* .enter-budget {
+    grid-area: budget;
 } */
 
 nav {
@@ -30,6 +28,7 @@ nav > ul {
     width: 100%;
     bottom: 0;
     position: fixed;
+    grid-area: nav;
 }
 
 nav > ul > li {
