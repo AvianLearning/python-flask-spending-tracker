@@ -9,9 +9,16 @@ import repositories.company_repository as company_repository
 from models.tag import Tag
 import repositories.tag_repository as tag_repository
 
+from models.budget import Budget
+import repositories.budget_repository as budget_repository
+
 transaction_repository.delete_all()
 company_repository.delete_all()
 tag_repository.delete_all()
+budget_repository.delete_all()
+
+total_budget = Budget(0.00)
+budget_repository.save(total_budget)
 
 company_1 = Company("RailScot")
 company_repository.save(company_1)

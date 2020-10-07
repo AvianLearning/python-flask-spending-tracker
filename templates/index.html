@@ -2,16 +2,22 @@
 
 {% block content %}
 <header>
-    <h2>Total spend: {{ total }}</h2>
-    <!-- <form class="enter-budget" action="/" method="POST">
-        <div>
-            <label for="amount">Set a budget: </label>
-            <input type="number" id="budget" name="budget" placeholder="0.00" step="0.01" min="0">
-        </div>
-        <button type="submit">Add budget</button>
-    </form> -->
+    <h2>Total spend: £{{ total }}</h2>
+    {% if total >= (budget.total_budget - 100) %}
+    <ul>
+        <li>
+            <h3 class="red">Warning: your budget is only £{{ budget.total_budget }}</h2>
+        </li>  
+    </ul>
+    {% else %}
+    <ul>
+        <li>
+            <h3 class="green">Your budget of £{{ budget.total_budget }} is healthy!</h2>
+        </li>
+    </ul>   
+    {% endif %}
+    
 </header>
-<!-- Add category icon if possible - if else block -->
 
 <article class="transaction-list">
   
@@ -48,15 +54,15 @@
             <li class="green-button"><h3><a href="/add-transaction"><i class="fas fa-plus"></i> Add transaction</a></h3></li>
             <li class="green-button"><h3><a href="/companies"><i class="fas fa-pen fa-xs"></i> Update companies</a></h3></li>
             <li class="green-button"><h3><a href="/categories"><i class="fas fa-pen fa-xs"></i> Update categories</a></h3></li>
-<!--        
+       
         <li>
-            <form class="enter-budget" action="/" method="POST">
-                    <label for="amount">Set a budget: </label>
-                    <input type="number" id="budget" name="budget" placeholder="0.00" step="0.01" min="0">
-                <button type="submit">Add budget</button>
+            <form class="enter-budget" action="/budget/edit" method="POST">
+                    <label for="budget">Set a new budget: </label>
+                    <input type="number" id="budget" name="budget" placeholder="{{ budget.total_budget }}" step="0.01" min="0">
+                <button class="grey-button" type="submit"><h3><i class="fas fa-coins fa-xs"></i> Set budget</h3></button>
             </form>
 
-        </li>  -->
+        </li> 
     </ul>
     </nav>
     

@@ -41,12 +41,27 @@ button {
     border-radius: 3px; 
     transition-duration: 0.4s;
     color: #fff;
-
 }
 
 button:hover {
     background-color: #3e7014;
 }
+.grey-button {
+    display: block;
+    padding: 12px;
+    border:0 none;
+    background-color: #fcfcfc;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; 
+    transition-duration: 0.4s;
+    color: #3e7014;
+}
+
+.grey-button:hover {
+    background-color: #d9e5d0;
+}
+
+
 
 
 
