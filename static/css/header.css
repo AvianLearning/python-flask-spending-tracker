@@ -32,12 +32,21 @@ main > header > h2 {
 main > header > h3 {
     font-size: 2em;
 }
+
+#budget-warning {
+    background-color: #fcfcfc;
+    width: 30%;
+    margin: auto;
+    padding: 1px;
+    border-radius: 3px;
+}
+
 .red {
-    color: red;
+    color: #ba3b3b;
     text-align: center;
 }
 
 .green {
-    color: green;
+    color: #457d17;
     text-align: center;
 }

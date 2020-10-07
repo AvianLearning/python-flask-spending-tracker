@@ -3,20 +3,14 @@
 {% block content %}
 <header>
     <h2>Total spend: £{{ total }}</h2>
+    <div id="budget-warning">
     {% if total >= (budget.total_budget - 100) %}
-    <ul>
-        <li>
-            <h3 class="red">Warning: your budget is only £{{ budget.total_budget }}</h2>
-        </li>  
-    </ul>
-    {% else %}
-    <ul>
-        <li>
-            <h3 class="green">Your budget of £{{ budget.total_budget }} is healthy!</h2>
-        </li>
-    </ul>   
-    {% endif %}
     
+                <h3 class="red">Warning: your budget is only £{{ budget.total_budget }}</h3>
+        {% else %}
+                <h3 class="green">Your budget of £{{ budget.total_budget }} is healthy!</h3>
+    {% endif %}
+    </div>
 </header>
 
 <article class="transaction-list">
