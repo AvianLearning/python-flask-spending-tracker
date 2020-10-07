@@ -9,7 +9,7 @@
 
 #### Instructions to run ####
 * Ensure to have the current version of Python, Flask, and PostGres installed.
-* In terminal, navigat to the project folder.
+* In terminal, navigate to the project folder.
 * Run the following commands in terminal: 
   * psql -d spending_tracker -f spending_tracker.sql 
   * python3 console.py
