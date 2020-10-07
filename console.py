@@ -38,6 +38,12 @@ company_repository.save(company_5)
 company_6 = Company("Blumen Ecke")
 company_repository.save(company_6)
 
+company_7 = Company("Cheeses of Nazareth")
+company_repository.save(company_7)
+
+company_8 = Company("Hair Today, Gone Tomorrow")
+company_repository.save(company_8)
+
 tag_1 = Tag("travel")
 tag_repository.save(tag_1)
 
@@ -56,6 +62,9 @@ tag_repository.save(tag_5)
 tag_6 = Tag("floristry")
 tag_repository.save(tag_6)
 
+tag_7 = Tag("personal")
+tag_repository.save(tag_7)
+
 transaction_1 = Transaction(150.00, company_1, tag_1)
 transaction_repository.save(transaction_1)
 
@@ -73,6 +82,12 @@ transaction_repository.save(transaction_5)
 
 transaction_6 = Transaction(28.99, company_6, tag_6)
 transaction_repository.save(transaction_6)
+
+transaction_7 = Transaction(14.40, company_7, tag_2)
+transaction_repository.save(transaction_7)
+
+transaction_8 = Transaction(19.99, company_8, tag_7)
+transaction_repository.save(transaction_8)
 
 transactions = transaction_repository.select_all()
 
