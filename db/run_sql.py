@@ -1,11 +1,13 @@
-import psycopg2
+import psycopg2, os
 import psycopg2.extras
 
 def run_sql(sql, values = None):
     results = []
     conn = None
+    database_url = os.getenv('DATABASE_URL')
+
     try:
-        conn = psycopg2.connect("dbname='spending_tracker'")
+        conn = psycopg2.connect(database_url)
         cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cur.execute(sql, values)
         conn.commit()
