@@ -22,8 +22,3 @@ class TestTransaction(unittest.TestCase):
 
     def test_transaction_has_category(self):
         self.assertEqual("food", self.transaction_2.tag.category)
-
-    # def test_can_return_total_of_transactions(self):
-    #     # all_transactions = [self.transaction_1.amount, self.transaction_2.amount]
-    #     # total = get_total(all_transactions)
-    #     # self.assertEqual(16.50, total)
